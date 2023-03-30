@@ -1,291 +1,291 @@
-
-
 <!--Loading font awesome icons-->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 
 <!-- background -->
 <section class="hero is-large is-primary is-bold is-fullheight">
-    <div class="hero-body">
-      <div class="container has-text-justified">
+  <div class="hero-body">
+    <div class="container has-text-justified">
+      <div class="content">
         <p class="title">
-            Create a Quiz
+          Create a Quiz
         </p>
         <p class="subtitle">
-            Customize your quiz below!
+          Customize your quiz below!
         </p>
-        <div class="container">
-            <div class="tabs is-centered is-boxed">
-            <ul>
-                <li data-target="Create-Quiz-Basic">
-                    <a>
-                        <span class="icon is-small"><i class="fa-regular fa-pen-to-square" aria-hidden="true"></i></span>
-                        <span>Edit Quiz</span>
-                    </a>
-                </li>
-                <li data-target="Create-Quiz-Questions">
-                    <a>
-                        <span class="icon is-small"><i class="fa-regular fa-block-question" aria-hidden="true"></i></span>
-                        <span>Questions</span>
-                    </a>
-                </li>
-                <li class="is-active tablinks" data-target="Create-Quiz-Options">
-                    <a>
-                        <span class="icon is-small"><i class="fa-regular fa-filter" aria-hidden="true"></i></span>
-                        <span>Options</span>
-                    </a>
-                </li>
-                <!--<li data-target="Create-Quiz-Styles">
+      </div>
+      <div class="content">
+        <div class="tabs is-boxed">
+          <ul>
+            <li class="tablinks" onclick="openTab(event,'edit_quiz')">
+              <a>
+                <span class="icon is-small"><i class="fa-regular fa-pen-to-square" aria-hidden="true"></i></span>
+                <span>Edit Quiz</span>
+              </a>
+            </li>
+            <li class="tablinks" onclick="openTab(event,'questions')">
+              <a>
+                <span class="icon is-small"><i class="fa-regular fa-block-question" aria-hidden="true"></i></span>
+                <span>Questions</span>
+              </a>
+            </li>
+            <li class="tablinks" onclick="openTab(event,'options')">
+              <a>
+                <span class="icon is-small"><i class="fa-regular fa-filter" aria-hidden="true"></i></span>
+                <span>Options</span>
+              </a>
+            </li>
+            <!--<li data-target="Create-Quiz-Styles">
                     <a>
                         <span class="icon is-small"><i class="fa-regular fa-text" aria-hidden="true"></i></span>
                         <span>Styles</span>
                     </a>
                 </li> -->
-                <li data-target="Create-Quiz-Tags">
-                    <a>
-                        <span class="icon is-small"><i class="fa-regular fa-tag" aria-hidden="true"></i></span>
-                        <span>Tags</span>
-                    </a>
-                </li>
-                <li data-target="Create-Quiz-Save">
-                    <a>
-                        <span class="icon is-small"><i class="fa-regular fa-floppy-disk" aria-hidden="true"></i></span>
-                        <span>Save & Finish</span>
-                    </a>
-                </li>
-            </ul>
-            </div>
-            <!-- content of tabs -->
-            <div class="px-2" id="tabcontent">
-                <!--Basic Quiz Info Editing-->
-                <div id="#Create-Quiz-Basic" (click)="toggle_Basic()">
-                    <form class="box">
-                        <h3 class="is-size-4">Edit Quiz</h3>
-                        <div class="field">
-                            <label class="label">Quiz Name</label>
-                            <div class="control">
-                                <input class="input" type="text" placeholder="Short Title of Quiz">
-                            </div>
-                        </div>
-                        <div class="field">
-                            <label class="label">Quiz Type</label>
-                            <div class="control">
-                                <div class="select">
-                                    <select>
-    <option>---</option>
-    <option>Classic</option>
-    <option>Clickable</option>
-    <option>Map</option>
-    <option>Picture Box</option>
-    <option>Picture Click</option>
-    <option>Slideshow</option>
-    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="field">
-                            <label class="label">Description</label>
-                            <div class="control">
-                                <input class="input" type="text" placeholder="eg. Can you name the planets in the solar system?">
-                            </div>
-                        </div>
-                        <div class="field">
-                            <label class="label">Category</label>
-                            <div class="control">
-                                <div class="select">
-                                    <select>
-    <option>---</option>
-    <option>Entertainment</option>
-    <option>Gaming</option>
-    <option>Geography</option>
-    <option>History</option>
-    <option>Holiday</option>
-    <option>Just for Fun</option>
-    <option>Language</option>
-    <option>Literature</option>
-    <option>Miscellaneous</option>
-    <option>Movies</option>
-    <option>Music</option>
-    <option>Religion</option>
-    <option>Science</option>
-    <option>Sports</option>
-    <option>Television</option>
-    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="field">
-                            <label class="label">Quiz Timer</label>
-                            <div class="control">
-                                <div class="select">
-                                    <select>
-    <option>---</option>
-    <option>00:15</option>
-    <option>00:30</option>
-    <option>00:45</option>
-    <option>01:00</option>
-    <option>01:30</option>
-    <option>02:00</option>
-    <option>02:30</option>
-    <option>03:00</option>
-    <option>04:00</option>
-    <option>05:00</option>
-    <option>06:00</option>
-    <option>07:00</option>
-    <option>08:00</option>
-    <option>09:00</option>
-    <option>10:00</option>
-    <option>11:00</option>
-    <option>12:00</option>
-    <option>13:00</option>
-    <option>14:00</option>
-    <option>15:00</option>
-    <option>16:00</option>
-    <option>17:00</option>
-    <option>18:00</option>
-    <option>19:00</option>
-    <option>20:00</option>
-    <option>21:00</option>
-    <option>22:00</option>
-    <option>23:00</option>
-    <option>24:00</option>
-    <option>25:00</option>
-    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="field is-grouped is-grouped-centered">
-                          <div class="control">
-                            <button class="button is-success is-medium" style="padding: 20px;">
-                              <span class="icon"><i class="fas fa-save"></i></span>
-                              <span>Save Changes</span>
-                            </button>
-                          </div>
-                        </div>
-                        <p>You must click 'Save Changes' to save your changes.</p>
-                    </form>
+            <li class="tablinks" onclick="openTab(event,'tags')">
+              <a>
+                <span class="icon is-small"><i class="fa-regular fa-tag" aria-hidden="true"></i></span>
+                <span>Tags</span>
+              </a>
+            </li>
+            <li class="tablinks" onclick="openTab(event,'save_public')">
+              <a>
+                <span class="icon is-small"><i class="fa-regular fa-floppy-disk" aria-hidden="true"></i></span>
+                <span>Save & Finish</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- content of tabs -->
+        <div class="px-2">
+          <!--Basic Quiz Info Editing-->
+          <div id="edit_quiz" class="tabcontent">
+            <form class="box">
+              <h3 class="is-size-4">Edit Quiz</h3>
+              <div class="field">
+                <label class="label">Quiz Name</label>
+                <div class="control">
+                  <input class="input" type="text" placeholder="Short Title of Quiz">
                 </div>
+              </div>
+              <div class="field">
+                <label class="label">Quiz Type</label>
+                <div class="control">
+                  <div class="select">
+                    <select>
+                      <option>---</option>
+                      <option>Classic</option>
+                      <option>Clickable</option>
+                      <option>Map</option>
+                      <option>Picture Box</option>
+                      <option>Picture Click</option>
+                      <option>Slideshow</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="field">
+                <label class="label">Description</label>
+                <div class="control">
+                  <input class="input" type="text" placeholder="eg. Can you name the planets in the solar system?">
+                </div>
+              </div>
+              <div class="field">
+                <label class="label">Category</label>
+                <div class="control">
+                  <div class="select">
+                    <select>
+                      <option>---</option>
+                      <option>Entertainment</option>
+                      <option>Gaming</option>
+                      <option>Geography</option>
+                      <option>History</option>
+                      <option>Holiday</option>
+                      <option>Just for Fun</option>
+                      <option>Language</option>
+                      <option>Literature</option>
+                      <option>Miscellaneous</option>
+                      <option>Movies</option>
+                      <option>Music</option>
+                      <option>Religion</option>
+                      <option>Science</option>
+                      <option>Sports</option>
+                      <option>Television</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="field">
+                <label class="label">Quiz Timer</label>
+                <div class="control">
+                  <div class="select">
+                    <select>
+                      <option>---</option>
+                      <option>00:15</option>
+                      <option>00:30</option>
+                      <option>00:45</option>
+                      <option>01:00</option>
+                      <option>01:30</option>
+                      <option>02:00</option>
+                      <option>02:30</option>
+                      <option>03:00</option>
+                      <option>04:00</option>
+                      <option>05:00</option>
+                      <option>06:00</option>
+                      <option>07:00</option>
+                      <option>08:00</option>
+                      <option>09:00</option>
+                      <option>10:00</option>
+                      <option>11:00</option>
+                      <option>12:00</option>
+                      <option>13:00</option>
+                      <option>14:00</option>
+                      <option>15:00</option>
+                      <option>16:00</option>
+                      <option>17:00</option>
+                      <option>18:00</option>
+                      <option>19:00</option>
+                      <option>20:00</option>
+                      <option>21:00</option>
+                      <option>22:00</option>
+                      <option>23:00</option>
+                      <option>24:00</option>
+                      <option>25:00</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="field is-grouped is-grouped-centered">
+                <div class="control">
+                  <button class="button is-success is-medium" style="padding: 20px;">
+                    <span class="icon"><i class="fas fa-save"></i></span>
+                    <span>Save Changes</span>
+                  </button>
+                </div>
+              </div>
+              <p>You must click 'Save Changes' to save your changes.</p>
+            </form>
+          </div>
 
-                <!--Questions-->
-                <div id="Create-Quiz-Questions" class="is-hidden">
-                    <div class="columns">
-                      <div class="column is-one-third">
-                        <form class="box">
-                          <h3 class="is-size-4">Add Question Data</h3>
-                          <div class="field">
-                            <label class="label">Question</label>
-                            <div class="control">
-                              <input class="input" type="text" placeholder="Type your question here">
-                            </div>
-                          </div>
-                          <div class="field">
-                            <label class="label">Answer</label>
-                            <div class="control">
-                              <input class="input" type="text" placeholder="Type the answer here">
-                            </div>
-                          </div>
-                        </form>
-                      </div>
-                      <div class="column">
-                        <div class="box">
-                          <h3 class="is-size-4">Questions Added</h3>
-                          <ul>
-                            <!-- Add the list of questions added here, this is just temporary solution most likely going to move to a table format -->
-                          </ul>
-                          <button class="button is-success is-outlined" style="padding: 1em;">Add Question</button>
-                        </div>
-                      </div>
+          <!--Questions-->
+          <div id="questions" class="tabcontent">
+            <div class="columns">
+              <div class="column is-one-third">
+                <form class="box">
+                  <h3 class="is-size-4">Add Question Data</h3>
+                  <div class="field">
+                    <label class="label">Question</label>
+                    <div class="control">
+                      <input class="input" type="text" placeholder="Type your question here">
                     </div>
                   </div>
-                  
+                  <div class="field">
+                    <label class="label">Answer</label>
+                    <div class="control">
+                      <input class="input" type="text" placeholder="Type the answer here">
+                    </div>
+                  </div>
+                  <div class="column">
+                    <div class="box">
+                      <h3 class="is-size-4">Questions Added</h3>
+                      <ul>
+                        <!-- Add the list of questions added here, this is just temporary solution most likely going to move to a table format -->
+                      </ul>
+                      <button class="button is-success is-outlined" style="padding: 1em;">Add Question</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
 
-                <!--Options-->
-                <div id="Create-Quiz-Options" class="is-hidden">
-                  <form class="box">
-                    <h3 class="is-size-4">Quiz Options</h3>
-                    <div class="field">
-                      <label class="label">Accept last word in answers</label>
-                      <div class="control">
-                        <label class="checkbox">
-                          <input type="checkbox">
-                          Yes
-                        </label>
-                      </div>
-                    </div>
-                    <div class="field">
-                      <label class="label">Accept single character answers</label>
-                      <div class="control">
-                        <label class="checkbox">
-                          <input type="checkbox">
-                          Yes
-                        </label>
-                      </div>
-                    </div>
-                    <div class="field">
-                      <label class="label">Filter default words from answers (a, an, and, the, and '&')</label>
-                      <div class="control">
-                        <label class="checkbox">
-                          <input type="checkbox">
-                          Yes
-                        </label>
-                      </div>
-                    </div>
-                    <div class="field">
-                      <label class="label">Wrong Answer ends the quiz</label>
-                      <div class="control">
-                        <label class="checkbox">
-                          <input type="checkbox">
-                          Yes
-                        </label>
-                      </div>
-                    </div>
-                    <div class="field">
-                      <label class="label">Hide hint text prior to starting the quiz</label>
-                      <div class="control">
-                        <label class="checkbox">
-                          <input type="checkbox">
-                          Yes
-                        </label>
-                      </div>
-                    </div>
-                    <div class="field">
-                      <label class="label">Do not display correct answers at the end of the quiz</label>
-                      <div class="control">
-                        <label class="checkbox">
-                          <input type="checkbox">
-                          Yes
-                        </label>
-                      </div>
-                    </div>
-                    <hr>
-                    <div class="field">
-                      <h4 class="title is-4">Answer Order</h4>
-                      <label class="radio">
-                        <input type="radio" name="answer-order" value="random">
-                        Randomize question order
-                      </label>
-                      <label class="radio">
-                        <input type="radio" name="answer-order" value="sequential">
-                        Force answers in order
-                      </label>
-                    </div>
-                    <div class="field is-grouped is-grouped-centered">
-                      <div class="control">
-                        <button class="button is-success is-large" style="margin-top: 20px;">
-                          <span class="icon">
-                            <i class="fas fa-save"></i>
-                          </span>
-                          <span>Save Options</span>
-                        </button>
-                        <p class="help is-danger" style="margin-top: 10px;">
-                          You must click 'Save Options' to save your changes.
-                        </p>
-                      </div>
-                    </div>
-                  </form>
+
+          <!--Options-->
+          <div id="options" class="tabcontent">
+            <form class="box">
+              <h3 class="is-size-4">Quiz Options</h3>
+              <div class="field">
+                <label class="label">Accept last word in answers</label>
+                <div class="control">
+                  <label class="checkbox">
+                    <input type="checkbox">
+                    Yes
+                  </label>
                 </div>
-                
+              </div>
+              <div class="field">
+                <label class="label">Accept single character answers</label>
+                <div class="control">
+                  <label class="checkbox">
+                    <input type="checkbox">
+                    Yes
+                  </label>
+                </div>
+              </div>
+              <div class="field">
+                <label class="label">Filter default words from answers (a, an, and, the, and '&')</label>
+                <div class="control">
+                  <label class="checkbox">
+                    <input type="checkbox">
+                    Yes
+                  </label>
+                </div>
+              </div>
+              <div class="field">
+                <label class="label">Wrong Answer ends the quiz</label>
+                <div class="control">
+                  <label class="checkbox">
+                    <input type="checkbox">
+                    Yes
+                  </label>
+                </div>
+              </div>
+              <div class="field">
+                <label class="label">Hide hint text prior to starting the quiz</label>
+                <div class="control">
+                  <label class="checkbox">
+                    <input type="checkbox">
+                    Yes
+                  </label>
+                </div>
+              </div>
+              <div class="field">
+                <label class="label">Do not display correct answers at the end of the quiz</label>
+                <div class="control">
+                  <label class="checkbox">
+                    <input type="checkbox">
+                    Yes
+                  </label>
+                </div>
+              </div>
+              <hr>
+              <div class="field">
+                <h4 class="title is-4">Answer Order</h4>
+                <label class="radio">
+                  <input type="radio" name="answer-order" value="random">
+                  Randomize question order
+                </label>
+                <label class="radio">
+                  <input type="radio" name="answer-order" value="sequential">
+                  Force answers in order
+                </label>
+              </div>
+              <div class="field is-grouped is-grouped-centered">
+                <div class="control">
+                  <button class="button is-success is-large" style="margin-top: 20px;">
+                    <span class="icon">
+                      <i class="fas fa-save"></i>
+                    </span>
+                    <span>Save Options</span>
+                  </button>
+                  <p class="help is-danger" style="margin-top: 10px;">
+                    You must click 'Save Options' to save your changes.
+                  </p>
+                </div>
+              </div>
+            </form>
+          </div>
 
-                <!--Styles, leaving empty for now, as we havent confirmed if we allowing users to edit the style of their quiz
+
+          <!--Styles, leaving empty for now, as we havent confirmed if we allowing users to edit the style of their quiz
                 <div id="Create-Quiz-Styles" class="is-hidden">
                     <form class="box">
                         <h3 class="is-size-4">Styles</h3>
@@ -293,106 +293,111 @@
                     </form>
                 </div> -->
 
-                <!--Tags-->
-                <div id="Create-Quiz-Tags" class="is-hidden">
-                  <form class="box">
-                    <h3 class="is-size-4">Tags</h3>
-                    <div class="columns">
-                      <div class="column is-one-third">
-                        <h4 class="is-size-5">Choose Tags:</h4>
-                        <!--the tags below will dynamically change depending on what category is selected -->
-                        <div class="buttons">
-                          <button class="button is-primary is-outlined">Tag 1</button>
-                          <button class="button is-primary is-outlined">Tag 2</button>
-                          <button class="button is-primary is-outlined">Tag 3</button>
-                          <button class="button is-primary is-outlined">Tag 4</button>
-                          <button class="button is-primary is-outlined">Tag 5</button>
-                          <button class="button is-primary is-outlined">Tag 6</button>
-                          <button class="button is-primary is-outlined">Tag 7</button>
-                          <button class="button is-primary is-outlined">Tag 8</button>
-                          <button class="button is-primary is-outlined">Tag 9</button>
-                          <!--Additional tags-->
-                        </div>
-                        <hr>
-                        <h4 class="is-size-5">Add Your Own Tag:</h4>
-                        <div class="field is-grouped">
-                          <p class="control is-expanded">
-                            <input class="input" type="text" placeholder="Enter Tag">
-                          </p>
-                          <p class="control">
-                            <button class="button is-primary">Add Tag</button>
-                          </p>
-                        </div>
-                      </div>
-                      <div class="column is-two-thirds">
-                        <h4 class="is-size-5">Selected Tags:</h4>
-                        <ul id="selected-tags">
-                          <!--Selected tags will be added dynamically here from the js file-->
-                        </ul>
-                        <div class="field is-grouped">
-                          <p class="control">
-                            <button class="button is-success" style="margin-right: 10px;">
-                              <span class="icon">
-                                <i class="fas fa-save"></i>
-                              </span>
-                              <span>Save Tags</span>
-                            </button>
-                          </p>
-                          <p class="control">
-                            <button class="button is-danger">
-                              <span class="icon">
-                                <i class="fas fa-times"></i>
-                              </span>
-                              <span>Cancel</span>
-                            </button>
-                          </p>
-                        </div>
-                        <p>You must click 'Save Changes' to save your changes</p>
-                      </div>
-                    </div>
-                  </form>
+          <!--Tags-->
+          <div id="tags" class="tabcontent">
+            <form class="box">
+              <h3 class="is-size-4">Tags</h3>
+              <div class="columns">
+                <div class="column is-one-third">
+                  <h4 class="is-size-5">Choose Tags:</h4>
+                  <!--the tags below will dynamically change depending on what category is selected -->
+                  <div class="buttons">
+                    <button class="button is-primary is-outlined">Tag 1</button>
+                    <button class="button is-primary is-outlined">Tag 2</button>
+                    <button class="button is-primary is-outlined">Tag 3</button>
+                    <button class="button is-primary is-outlined">Tag 4</button>
+                    <button class="button is-primary is-outlined">Tag 5</button>
+                    <button class="button is-primary is-outlined">Tag 6</button>
+                    <button class="button is-primary is-outlined">Tag 7</button>
+                    <button class="button is-primary is-outlined">Tag 8</button>
+                    <button class="button is-primary is-outlined">Tag 9</button>
+                    <!--Additional tags-->
+                  </div>
+                  <hr>
+                  <h4 class="is-size-5">Add Your Own Tag:</h4>
+                  <div class="field is-grouped">
+                    <p class="control is-expanded">
+                      <input class="input" type="text" placeholder="Enter Tag">
+                    </p>
+                    <p class="control">
+                      <button class="button is-primary">Add Tag</button>
+                    </p>
+                  </div>
                 </div>
-                
-                
-                <!--Saving and Publishing-->
-                <div id="Create-Quiz-Save" class="is-hidden">
-                  <form class="box">
-                    <div class="columns">
-                      <div class="column is-half">
-                        <h3 class="is-size-4 has-text-centered">Ready to show your quiz to the world, and beyond?</h3>
-                        <p class="subtitle has-text-centered">Once published, this quiz will be viewable on your 'Published Quizzes' page, among other places. Don't forget to share your new quiz with your friends!</p>
-                        <div class="buttons is-centered">
-                          <button class="button is-primary">Publish Quiz Publically</button>
-                        </div>
-                        <p class="subtitle has-text-centered is-uppercase has-text-weight-bold">OR</p>
-                        <div class="buttons is-centered">
-                          <button class="button is-primary">Publish Quiz Privately</button>
-                        </div>
-                        <div class="field has-text-centered">
-                          <input type="checkbox" id="terms-and-conditions">
-                          <label for="terms-and-conditions">I agree to the terms and conditions</label>
-                        </div>
-                      </div>
-                      <div class="column is-half">
-                        <h4 class="has-text-weight-bold">Public</h4>
-                        <p>Your quiz will be searchable by other players. We may also feature and publish your quiz.</p>
-                        <p><strong>NOTE:</strong> If the quiz is published on the front page, you will lose the ability to edit this quiz. We also reserve the right to add, remove, or alter quizzes selected for featuring.</p>
-                        <br>
-                        <h4 class="has-text-weight-bold">Private</h4>
-                        <p>A link to your quiz will only show up on your private profile. You can still use the link to play your quiz, send to friends, and see results. Quizzes marked as private will not be published by us.</p>
-                      </div>
-                    </div>
-                    <div class="field">
-                      <label class="label">Quiz Name</label>
-                      <div class="control">
-                        <input class="input" type="text" placeholder="Short Title of Quiz">
-                      </div>
-                    </div>
-                  </form>
-                </div>  
-            </div>
+                <div class="column is-two-thirds">
+                  <h4 class="is-size-5">Selected Tags:</h4>
+                  <ul id="selected-tags">
+                    <!--Selected tags will be added dynamically here from the js file-->
+                  </ul>
+                  <div class="field is-grouped">
+                    <p class="control">
+                      <button class="button is-success" style="margin-right: 10px;">
+                        <span class="icon">
+                          <i class="fas fa-save"></i>
+                        </span>
+                        <span>Save Tags</span>
+                      </button>
+                    </p>
+                    <p class="control">
+                      <button class="button is-danger">
+                        <span class="icon">
+                          <i class="fas fa-times"></i>
+                        </span>
+                        <span>Cancel</span>
+                      </button>
+                    </p>
+                  </div>
+                  <p>You must click 'Save Changes' to save your changes</p>
+                </div>
+              </div>
+            </form>
           </div>
-          <script src = "./assets/create-quiz.js"></script>
+
+
+          <!--Saving and Publishing-->
+          <div id="save_public" class="tabcontent">
+            <form class="box">
+              <div class="columns">
+                <div class="column is-half">
+                  <h3 class="is-size-4 has-text-centered">Ready to show your quiz to the world, and beyond?</h3>
+                  <p class="subtitle has-text-centered">Once published, this quiz will be viewable on your 'Published
+                    Quizzes' page, among other places. Don't forget to share your new quiz with your friends!</p>
+                  <div class="buttons is-centered">
+                    <button class="button is-primary">Publish Quiz Publically</button>
+                  </div>
+                  <p class="subtitle has-text-centered is-uppercase has-text-weight-bold">OR</p>
+                  <div class="buttons is-centered">
+                    <button class="button is-primary">Publish Quiz Privately</button>
+                  </div>
+                  <div class="field has-text-centered">
+                    <input type="checkbox" id="terms-and-conditions">
+                    <label for="terms-and-conditions">I agree to the terms and conditions</label>
+                  </div>
+                </div>
+                <div class="column is-half">
+                  <h4 class="has-text-weight-bold">Public</h4>
+                  <p>Your quiz will be searchable by other players. We may also feature and publish your quiz.</p>
+                  <p><strong>NOTE:</strong> If the quiz is published on the front page, you will lose the ability to
+                    edit this quiz. We also reserve the right to add, remove, or alter quizzes selected for featuring.
+                  </p>
+                  <br>
+                  <h4 class="has-text-weight-bold">Private</h4>
+                  <p>A link to your quiz will only show up on your private profile. You can still use the link to play
+                    your quiz, send to friends, and see results. Quizzes marked as private will not be published by us.
+                  </p>
+                </div>
+              </div>
+              <div class="field">
+                <label class="label">Quiz Name</label>
+                <div class="control">
+                  <input class="input" type="text" placeholder="Short Title of Quiz">
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
+      <script src="../../assets/create-quiz.js"></script>
     </div>
+  </div>
 </section>

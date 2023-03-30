@@ -4,6 +4,26 @@
   background-position: center center;
 }
 
+.content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tabcontent{
+  display: none;
+  width: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 
 /* from previous raw css, still need to reintegrate */
 /*

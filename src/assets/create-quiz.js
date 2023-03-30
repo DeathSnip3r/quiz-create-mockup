@@ -1,21 +1,14 @@
+function openTab(event, tabID){
+    tabcontent = document.getElementsByClassName('tabcontent');
+    for(i=0;i<tabcontent.length;i++){
+        tabcontent[i].style.display = 'none';
+    }
 
-//switching tabs in the create quiz component
-const  tabs = document.querySelectorAll('.tabs li');
-const tabContentBoxes = document.querySelectorAll('#tab-content > div');
+    tablinks = document.getElementsByClassName('tablinks');
+    for(i=0;i<tablinks.length;i++){
+        tablinks[i].className = tablinks[i].className.replace('is-active','');
+    }
 
-tabs.forEach((tab) => {
-    console.log('touched tab')
-    tab.addEventListener('click', () => {
-        tabs.forEach(item => item.classList.remove('is-active'))
-        tab.classList.add('is-active');
-
-        const target = tab.dataset.target
-        tabContentBoxes.forEach(box => {
-            if(box.getAttribute('id') === target) {
-                box.classList.remove('is-hidden');
-            } else {
-                box.classList.add('is-hidden');
-            }
-        });
-    })
-})
+    document.getElementById(tabID).style.display = 'block';
+    event.currentTarget.className += "is-active";
+}
