@@ -1,0 +1,130 @@
+.hero {
+  background-image: url('/assets/img/school-supplies-7069762.jpeg') !important;
+  background-size: cover;
+  background-position: center center;
+}
+
+
+/* from previous raw css, still need to reintegrate */
+/*
+.back {
+  display: grid;
+  background-image: url("./src/app/school-supplies-7069762.jpg");
+  background-color: gray;
+  background-blend-mode: multiply;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+}
+
+.class {
+background-color: #f7f7f7;
+padding: 50px;
+}
+
+.title {
+font-size: 2.5rem;
+margin-top: 0;
+margin-bottom: 20px;
+}
+
+.subtitle {
+font-size: 1.5rem;
+margin-top: 0;
+margin-bottom: 20px;
+}
+
+.box {
+border: 1px solid #ccc;
+background-color: #fff;
+padding: 20px;
+}
+
+.field {
+margin-bottom: 20px;
+}
+
+.label {
+font-size: 1rem;
+font-weight: bold;
+margin-bottom: 5px;
+}
+
+.input {
+border: 1px solid #ccc;
+border-radius: 5px;
+padding: 5px;
+}
+
+.select {
+position: relative;
+display: inline-block;
+vertical-align: middle;
+margin-bottom: 10px;
+}
+
+.select::before {
+content: '';
+position: absolute;
+top: 50%;
+right: 10px;
+transform: translateY(-50%);
+border-style: solid;
+border-width: 5px 5px 0 5px;
+border-color: #666 transparent transparent transparent;
+}
+
+.select select {
+font-size: 1rem;
+padding: 5px 30px 5px 10px;
+appearance: none;
+background-color: transparent;
+border: none;
+border-radius: 0;
+width: 100%;
+box-sizing: border-box;
+cursor: pointer;
+}
+
+.tabs {
+margin-bottom: 20px;
+}
+
+.tabs li {
+display: inline-block;
+}
+
+.tabs a {
+display: flex;
+align-items: center;
+position: relative;
+padding: 10px 20px;
+color: #333;
+text-decoration: none;
+}
+
+.tabs .is-active a {
+background-color: #333;
+color: #fff;
+}
+
+.tabs .is-active a::after {
+content: '';
+position: absolute;
+bottom: -5px;
+left: 50%;
+transform: translateX(-50%);
+width: 0;
+height: 0;
+border-style: solid;
+border-width: 0 10px 10px 10px;
+border-color: transparent transparent #333 transparent;
+}
+
+.tabs .box {
+margin-top: 20px;
+}
+*/
